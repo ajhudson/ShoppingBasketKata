@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ShoppingBasketKata.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShoppingBasketKata
+namespace ShoppingBasketKata.Interfaces
 {
     public interface IShoppingBasket
     {
@@ -16,6 +17,6 @@ namespace ShoppingBasketKata
 
         bool IsEmpty();
 
-        ItemisedBillModel GetItemisedBill();
+        ItemisedBill GetItemisedBill();
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ShoppingBasketKata.Enums;
+using ShoppingBasketKata.Models;
 using System.Linq;
 
 namespace ShoppingBasketKata.Tests
@@ -72,11 +74,14 @@ namespace ShoppingBasketKata.Tests
             basket.AddItem(item3);
 
             // Act
-            ItemisedBillModel result = basket.GetItemisedBill();
+            ItemisedBill result = basket.GetItemisedBill();
 
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(2, result.ItemisedItems.Count());
+            Assert.AreEqual(2, result.ItemisedItems[0].Quantity);
+            Assert.AreEqual(ItemType.Banana, result.ItemisedItems[0].Item.ItemType);
+            Assert.AreEqual(ItemType.MarsBar, result.ItemisedItems[1].Item.ItemType);
             Assert.AreEqual(5.5M, result.Total);
         }
     }

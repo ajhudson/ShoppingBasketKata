@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShoppingBasketKata
+namespace ShoppingBasketKata.Models
 {
     public class ItemisedItem
     {

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShoppingBasketKata
+namespace ShoppingBasketKata.Models
 {
-    public class ItemisedBillModel
+    public class ItemisedBill
     {
         public List<ItemisedItem> ItemisedItems { get; set; }
 
         public decimal Total
         {
-            get => this.ItemisedItems.Select(i => i.Quantity * i.Item.Price).Sum();
+            get => ItemisedItems.Select(i => i.Quantity * i.Item.Price).Sum();
         }
     }
 }
